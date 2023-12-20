@@ -1,0 +1,35 @@
+# Prototipo Pity-GPT
+
+## Descrizione
+Il prototipo è un'applicazione Python che sfrutta l'API di OpenAI per valutare automaticamente annunci di qualsiasi categoria, arricchendoli con dettagli e uno stile professionale.
+
+## Struttura del Progetto
+Il progetto è strutturato come segue:
+
+- **app.py:** Lo script principale che gestisce l'interazione con OpenAI.
+- **prompt.txt:** Il file di input contenente l'annuncio immobiliare in inglese.
+- **Dockerfile:** Il file Docker per creare l'immagine del container.
+- **go.sh:** Uno script di utilità per semplificare la build e l'esecuzione del container.
+
+## Istruzioni Principali
+
+### Requisiti
+- Docker installato sul tuo sistema.
+
+### Utilizzo
+1. Assicurati di avere la tua chiave API OpenAI.
+2. Sostituisci `YOUR_API_KEY` nel file Dockerfile con la tua chiave API.
+3. Esegui lo script `go.sh` per creare e avviare il container:
+
+    ```bash
+    ./go.sh build  # Per creare l'immagine Docker
+    ./go.sh run    # Per avviare il container
+    ```
+
+4. Segui le istruzioni nella console per inserire il testo in inglese da tradurre.
+
+### Arresto del Container
+Se desideri arrestare il container:
+
+```bash
+./go.sh stop
